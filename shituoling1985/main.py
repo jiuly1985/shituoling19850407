@@ -1,34 +1,28 @@
 from kivy.app import App
-from kivy.uix.button import Button
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.gridlayout import GridLayout
-from kivy.uix.floatlayout import FloatLayout
-from kivy.uix.label import Label
-from kivy.uix.textinput import TextInput
-from kivy.uix.popup import Popup
-from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.uix.scrollview import ScrollView
-from kivy.app import App
-from kivy.uix.button import Button
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.gridlayout import GridLayout
-from kivy.uix.floatlayout import FloatLayout
-from kivy.uix.label import Label
-from kivy.uix.textinput import TextInput
-from kivy.uix.popup import Popup
-from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.uix.scrollview import ScrollView
-from kivy.uix.togglebutton import ToggleButton  
 from kivy.core.window import Window
 from kivy.core.text import LabelBase
 from kivy.resources import resource_add_path
+from kivy.lang import Builder
+
+# UI组件
+from kivy.uix.button import Button
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.gridlayout import GridLayout
+from kivy.uix.floatlayout import FloatLayout
+from kivy.uix.label import Label
+from kivy.uix.textinput import TextInput
+from kivy.uix.popup import Popup
+from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.uix.scrollview import ScrollView
+from kivy.uix.togglebutton import ToggleButton
+
+# 标准库
 import os
-from kivy.lang import Builder
-from kivy.core.window import Window
-from kivy.core.text import LabelBase
-from kivy.resources import resource_add_path
-import os_
-from kivy.lang import Builder
+
+# 初始化配置
+Window.clearcolor = (0, 0, 0, 1)
+resource_add_path(os.path.abspath("./src"))
+LabelBase.register(name='CustomFont', fn_regular='DroidSansFallback.ttf')
 
 # 如果字体文件在 src 目录下
 resource_add_path(os.path.abspath("./src"))
