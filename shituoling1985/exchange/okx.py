@@ -3,7 +3,7 @@ import time
 import requests
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from database.models import Kline
+from exchange.models import Kline
 from config import config
 
 # 读取配置文件
